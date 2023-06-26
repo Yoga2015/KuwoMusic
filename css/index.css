@@ -15,3 +15,152 @@ a {
   color: #333;
   text-decoration: none;
 }
+body {
+  background-color: #f9fafb;
+}
+/* 定义变量 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+  height: 13.33333333vw;
+  background-color: #fff;
+}
+header .left {
+  width: 62.66666667vw;
+  height: 13.33333333vw;
+  background-image: url(../assets/topLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header a {
+  width: 21.33333333vw;
+  height: 8vw;
+  background-color: #ffe31b;
+  text-align: center;
+  line-height: 8vw;
+  border-radius: 4vw;
+  font-size: 3.46666667vw;
+}
+.search {
+  padding: 2.66666667vw 4vw;
+  height: 13.86666667vw;
+}
+.search .txt {
+  height: 8.53333333vw;
+  background-color: #f2f4f5;
+  border-radius: 4.26666667vw;
+  text-align: center;
+  line-height: 8.53333333vw;
+  /* 字体图标 、文字的颜色 都一样，就在父级设置，子级继承 */
+  font-size: 3.73333333vw;
+  color: #a1a4b3;
+}
+.search .txt .icon-icon-test3 {
+  font-size: 4.26666667vw;
+}
+.banner {
+  height: 28.8vw;
+  padding: 0 4vw;
+}
+.banner ul li {
+  width: 92vw;
+  height: 28.8vw;
+}
+.banner ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* cover 完全覆盖 */
+  border-radius: 2.13333333vw;
+}
+.list {
+  margin-top: 5.33333333vw;
+  padding: 0 4vw;
+}
+.list .content li {
+  display: flex;
+  margin-bottom: 4.26666667vw;
+  height: 28vw;
+  background-color: #fff;
+  border-radius: 2.66666667vw;
+}
+.list .content li .pic {
+  margin-right: 5.33333333vw;
+}
+.list .content li .pic img {
+  width: 28vw;
+  height: 28vw;
+  border-radius: 2.66666667vw;
+}
+.list .content li .txt a {
+  display: block;
+  font-size: 3.2vw;
+  color: #a1a4b3;
+  line-height: 1.8;
+}
+.list .content li .txt .more {
+  font-size: 3.73333333vw;
+  color: #262338;
+}
+.list .content li .txt .more .iconfont {
+  font-size: 4.26666667vw;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 6.66666667vw;
+  align-items: center;
+  margin-bottom: 4.26666667vw;
+}
+.title h4 {
+  font-size: 5.33333333vw;
+}
+.title a {
+  font-size: 3.2vw;
+  color: #a1a4b3;
+}
+.title a .icon-icon-test17 {
+  font-size: 4.26666667vw;
+}
+.recommend {
+  padding: 0 4vw;
+}
+.recommend .recommendContent ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.recommend .recommendContent ul li {
+  margin-bottom: 4.26666667vw;
+  width: 28vw;
+  height: 38.13333333vw;
+}
+.recommend .recommendContent ul li .pic {
+  width: 28vw;
+  height: 28vw;
+  position: relative;
+}
+.recommend .recommendContent ul li .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2.66666667vw;
+}
+.recommend .recommendContent ul li .pic .cover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18.66666667vw;
+  height: 7.46666667vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 2.66666667vw 0 2.66666667vw;
+  font-size: 3.73333333vw;
+  color: #fff;
+  text-align: center;
+  line-height: 7.46666667vw;
+}
+.recommend .recommendContent ul li .txt {
+  font-size: 2.13333333vw;
+}

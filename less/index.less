@@ -2,3 +2,204 @@
 
 @import "./base.less";
 
+body{
+  background-color: #f9fafb;
+}
+
+@vw:3.75vw;  /* 定义变量 */
+
+// 头部
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 (15 / @vw);
+  height:(50 / @vw);
+  background-color: #fff;
+
+  // left
+  .left{
+    width: (235 / @vw);
+    height: (50 / @vw);
+    background-image: url(../assets/topLogo.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // 下载
+  a{
+    // 由于父级header设置了 弹性布局，所以a标签的宽高就生效了
+    width: (80 / @vw);
+    height: (30 / @vw);
+    background-color: #ffe31b;
+    text-align: center;
+    line-height: (30 /@vw);
+    border-radius:(15 / @vw);
+    font-size: (13 / @vw);
+  }
+}
+
+
+// search搜索区域
+.search {
+  padding: (10 / @vw) (15 / @vw);
+  height: (52 / @vw);
+  // background-color: pink;
+
+  .txt {
+    height: (32 / @vw);
+    background-color: #f2f4f5;
+    border-radius: (16 / @vw);
+    text-align: center;
+    line-height: (32 / @vw);
+    /* 字体图标 、文字的颜色 都一样，就在父级设置，子级继承 */
+    font-size: (14 / @vw);
+    color: #a1a4b3;
+
+    .icon-icon-test3{
+      font-size: (16 / @vw);
+    }
+
+  }
+}
+
+
+// banner区域
+.banner{
+  height: (108 / @vw);
+  padding: 0 (15 / @vw);
+  // background-color: pink;
+  ul{
+    li {
+        width: (345 / @vw);
+        height: (108 / @vw);
+    
+        img {
+          width: 100%;
+          height: 100%;
+
+          //  缩放 img 图片比例 跟 父级盒子 比例不同，避免图片挤压变形
+          object-fit: cover; /* cover 完全覆盖 */
+
+          border-radius: (8 / @vw);
+        }
+      }
+  }
+}
+
+
+// list 排行榜
+.list{
+  margin-top: (20 / @vw);
+  padding: 0 (15 / @vw);
+  // background-color: pink;
+
+  // content 内容
+  .content{
+    li{
+      display: flex;
+      margin-bottom: (16 / @vw);
+      height: (105 / @vw);  
+      background-color: #fff;
+      border-radius: (10 / @vw);
+
+        // 图片
+        .pic{
+          margin-right: (20 / @vw);
+          img {
+              width: (105 / @vw);
+              height: (105 / @vw);   
+              border-radius: (10 / @vw);
+          }
+        }
+
+        // 文字
+        .txt{
+          a{
+            display: block;
+            font-size: (12 / @vw);          
+            color: #a1a4b3;
+            line-height: 1.8;
+          }
+          .more {
+            font-size: (14 / @vw);
+            color: #262338;
+            .iconfont {
+                font-size: (16 / @vw);
+              }
+          }
+        }
+      }
+    }
+}
+
+
+// title 标题 --> 公共样式
+.title{
+  display: flex;
+  justify-content: space-between;
+  line-height:(25 / @vw);
+  align-items: center;
+  margin-bottom: (16 / @vw);
+  h4{
+    font-size: (20 / @vw);
+  }
+  a{
+    font-size: (12 / @vw);
+    color: #a1a4b3;
+    .icon-icon-test17 {
+        font-size: (16 / @vw);
+      }
+  }
+}
+
+
+// recommend 推荐歌单
+.recommend {
+  padding: 0 (15 / @vw);
+  .recommendContent {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        margin-bottom: (16 / @vw);
+        width: (105 / @vw);
+        height: (143 / @vw);
+        // background-color: pink;
+        // 图片
+        .pic{
+          width: (105 / @vw);
+          height: (105 / @vw);
+          position: relative;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: (10 / @vw);  
+          }
+          // 阴影层
+          .cover{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width:(70 / @vw);
+            height:(28 / @vw);
+            background-color: rgba(0,0,0,0.8);
+            border-radius: 0 (10 / @vw) 0 (10 / @vw);
+            font-size: (14 / @vw);
+            color: #fff;
+            text-align: center;
+            line-height: (28 / @vw); 
+          }
+        }
+
+        // 文字
+        .txt{
+          font-size:(8 / @vw);
+        }
+      }
+    }
+  }
+}
+
