@@ -10,9 +10,16 @@ body{
 
 // 头部
 header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  // 固定定位 的 盒子，宽度 靠 内容撑开，希望宽度100%
+  width: 100%;
   padding: 0 (15 / @vw);
   height:(50 / @vw);
   background-color: #fff;
@@ -42,6 +49,10 @@ header{
 
 // search搜索区域
 .search {
+
+  //由于 header头部区域 固定定位 ，脱标不占位，搜索去最顶了，加上外边距挤下来即可
+  margin-top:(50 / @vw);
+
   padding: (10 / @vw) (15 / @vw);
   height: (52 / @vw);
   // background-color: pink;
@@ -155,7 +166,8 @@ header{
 
 
 // recommend 推荐歌单
-.recommend {
+.recommend,
+.listening{
   padding: 0 (15 / @vw);
   .recommendContent {
     ul {
@@ -199,6 +211,77 @@ header{
           font-size:(8 / @vw);
         }
       }
+    }
+  }
+}
+
+
+// 安装 、下载
+.download{
+  position: fixed;
+  left:(15 / @vw);
+  bottom: (30 / @vw);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 (10 / @vw) (2 / @vw) (15 / @vw);
+  width:(345 / @vw);
+  height:(45 / @vw);
+  background-color: #fff;
+  border-radius:(22 / @vw);
+  // 盒子阴影
+  box-shadow: 0.267vw 0 5.467vw 1px rgba(232, 235, 241, .73);
+
+  img{
+    margin-right: (10 / @vw);
+    width: (36 / @vw);
+    height: (36 / @vw);
+    text-align: center;
+    line-height: (45 / @vw);
+  }
+
+  p{
+    flex: 1;
+    font-size: (14 / @vw);
+    font-weight: 700;
+  }
+  span{
+    width: (32 / @vw);
+    height: (32 / @vw);
+    background-color: #f2f3f5;
+    border-radius: 50%;
+    text-align: center;
+    line-height: (32 / @vw);
+    font-size: (16 / @vw);
+  }
+}
+
+
+// footer 尾部区域
+footer{
+  margin-top: (40 / @vw);
+  margin-bottom:(108 / @vw);
+  height: (87 / @vw);
+  font-size: (12 / @vw);
+  text-align: center;
+  color: #a1a4b3;
+
+  .flogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: (10 / @vw);
+    height: (24 / @vw);
+    img{
+      width: (22 / @vw);
+      height: (23 / @vw);
+      object-fit: contain;
+    }
+    p{
+      margin-left: (5 /@vw);
+      font-size: (14 / @vw);
+      color: #333;   
     }
   }
 }
